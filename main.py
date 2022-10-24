@@ -13,13 +13,17 @@ class Janela(pyglet.window.Window):
         self.campo_resposta = widgets.Campo_resposta(400, 230, 300, 70)
         self.area_resp_certas = widgets.Area_respostas_certas(30, 300, 1300, 420)
         self.palavras_certas = self.partida["palavras"]
-        
-        pos = 0
-        for caractere in self.letras_embaralhadas:
-            self.classe_letras_embaralhadas.append(widgets.Letra(480 + pos, 170, 70, 70, caractere)) #transforma
-            pos += 70
+        self.gera_letras_embaralhadas()
 
         self.componentes_clicaveis = [self.btn_enviar, self.btn_deletar, self.classe_letras_embaralhadas]
+
+    def gera_letras_embaralhadas(self):
+        pos = 0
+        letra_distancia = 70
+        for caractere in self.letras_embaralhadas:
+            self.classe_letras_embaralhadas.append(widgets.Letra(480 + pos, 170, letra_distancia, letra_distancia, caractere)) #transforma
+            pos += letra_distancia
+
 
     def on_draw(self):
         window.clear()
@@ -50,15 +54,17 @@ class Janela(pyglet.window.Window):
                         # letra.clicada = True
             elif componente == self.btn_deletar:
                 if componente.contem_ponto(x, y):
-                    componente.click(self.campo_resposta)
+                    self.campo_resposta.deleta()
             elif componente == self.btn_enviar:
                 if componente.contem_ponto(x, y):
                     acertou = componente.click(self.campo_resposta, self.palavras_certas, self.area_resp_certas)
                     if acertou:
+                        self.campo_resposta.label.text = ""
+                        palavra = self.campo_resposta.label.text
                         note = pyglet.resource.media("acerto.wav")
                         note.play()
-                        palavra = self.campo_resposta.label.text
-                        # self.palavras_certas.remove(palavra)
+                        print(self.palavras_certas)
+                        self.palavras_certas.remove(palavra)
 
 window = Janela(1280, 720)
 glClearColor(255, 255, 255, 255)

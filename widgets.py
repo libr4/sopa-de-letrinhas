@@ -83,7 +83,6 @@ class Campo_resposta(Widget):
 class Btn_Deletar(Botao):
     def __init__(self, x, y, width, height, texto="deletar"):
         super().__init__(x, y, width, height, texto)
-        self.label = Widget.gerar_label(self.x, self.y, self.width, self.height, self.texto, (255, 255, 255, 255))
     def click(self, campo_resposta:Campo_resposta):
         campo_resposta.deleta()
 
@@ -124,7 +123,6 @@ class Area_respostas_certas(Widget):
 class Btn_Enviar(Botao):
     def __init__(self, x, y, width, height, texto="enviar"):
         super().__init__(x, y, width, height, texto)
-        self.label = Widget.gerar_label(self.x, self.y, self.width, self.height, self.texto, (255, 255, 255, 255))
     
     def click(self, campo_resposta:Campo_resposta, palavras_certas:str, area_resp_certas:Area_respostas_certas):
         '''Retorna verdadeiro se o jogador acertou'''
@@ -134,7 +132,4 @@ class Btn_Enviar(Botao):
             acertou = True 
             coluna = len(palavra) - 3 #palavra eh, aqui, a resposta certa dada pelo jogador
             area_resp_certas.digita(coluna, palavra)
-            campo_resposta.label.text = ""
-            note = pyglet.resource.media("acerto.wav")
-            note.play()
         return acertou #esse retorno serve para deletar a palavra na lista principal, para que o jogador nao mande a mesma palavra duas vezes
