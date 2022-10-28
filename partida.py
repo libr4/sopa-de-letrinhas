@@ -2,8 +2,9 @@ import random
 # import pyglet
 
 class Partida:
-    def __init__(self, n):
-        pass
+    def __init__(self):
+        self.rodada = Partida.gerar_partida()
+
     @classmethod
     def gerar_palavras(cls) -> list[str]:
         '''Retorna a lista de palavras que deverao ser descobertas pelo jogador'''
@@ -13,6 +14,7 @@ class Partida:
         linha = random.randint(0, tamanho)
         palavras_str = partidas[linha]
         palavras = palavras_str.split(",")
+        palavras[len(palavras) - 1] = palavras[len(palavras) - 1][:-1] #remove o caractere \n da última palavra na lista
         return palavras
     @classmethod
     def gerar_letras(cls, palavras:str) -> list[str]:
