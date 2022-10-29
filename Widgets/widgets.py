@@ -20,7 +20,7 @@ class Widget(ABC):
     @classmethod
     def gerar_label(cls, x:int, y:int, width:int, height:int, texto:str = "", color:Tuple = (0, 0, 0, 255), **kwargs):
         label = pyglet.text.Label(texto,
-                font_name='askhjflk',
+                font_name='Tahoma',
                 font_size=kwargs['font_size'] if 'font_size' in kwargs else 32,
                 color=color,
                 anchor_x=kwargs['anchor_x'] if 'anchor_x' in kwargs else 'center', 

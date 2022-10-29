@@ -18,7 +18,8 @@ class Letra(Widget):
         self.label.draw()
     def __repr__(self):
         return f"{self.letra}"
-    def click(self, campo_resposta, palavras_certas, area_resp_certas):
+    def click(self, *argumentos):
+        campo_resposta = argumentos[0]
         campo_resposta.digita(self.letra)
     @property
     def clicada(self):

@@ -21,7 +21,8 @@ class Botao(Widget, ABC):
 class Btn_Deletar(Botao):
     def __init__(self, x, y, width, height, texto="deletar"):
         super().__init__(x, y, width, height, texto)
-    def click(self, campo_resposta, palavras_certas, area_resp_certas):
+    def click(self, *argumentos):
+        campo_resposta = argumentos[0]
         campo_resposta.deleta()
 
 
@@ -29,13 +30,17 @@ class Btn_Enviar(Botao):
     def __init__(self, x, y, width, height, texto="enviar"):
         super().__init__(x, y, width, height, texto)
 
-    def click(self, campo_resposta, palavras_certas:list[ str ], area_resp_certas):
+    def click(self, *argumentos):
+        print("oi")
+        campo_resposta = argumentos[0]
+        palavras_certas = argumentos[1]
+        area_resp_certas = argumentos[2]
         palavra = campo_resposta.label.text
         print(palavra, palavras_certas)
         if palavra in palavras_certas:
             campo_resposta.label.text = ""
 
-            note = pyglet.resource.media("acerto.wav")
+            note = pyglet.resource.media("Assets/acerto.wav")
             note.play()
 
             coluna = len(palavra) - 3 #palavra eh, aqui, a resposta certa dada pelo jogador

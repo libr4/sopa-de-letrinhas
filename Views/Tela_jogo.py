@@ -14,7 +14,7 @@ class Tela_jogo():
         self.letras_embaralhadas = self.partida["letras_embaralhadas"]
         self.classe_letras_embaralhadas = []
         self.campo_resposta = Campo_resposta(400, 160, 300, 70)
-        self.area_resp_certas = Area_respostas_certas(30, 240, 1300, 420)
+        self.area_resp_certas = Area_respostas_certas(100, 240, 1150, 320)
         self.palavras_certas = self.partida["palavras"]
         self.gera_letras_embaralhadas()
 
