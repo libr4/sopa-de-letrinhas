@@ -5,3 +5,16 @@ plebeu,ele,bule,pele,bel,leu,pule,plebe
 esnobe,soe,nos,sobe,bens,sebe,bons,ensebo,bones,sob,seno,bone,sebo
 frango,grao,aro,agro,afro,garfo,fora,nora,grafo,nao,for,roga,orna,ora,gora,roa,ano,arfo,faro,orfa
 sobrio,rios,bois,boi,bis,rio,brio,soo,roo,boio,brioso,brios,sobro,boro,robo,sob,ris,soro,riso,roi,ois,oro,robos
+duvida,david,adiu,davi,diva,uiva,vida,dai,dia,ida,uai,uva,vai,via,viu
+ciente,tecei,ceei,ceie,cite,ente,iene,tece,teci,tine,etc
+legado,gelado,degola,alego,geado,goela,algo,dela,gado,galo,gela,gelo,gola,gole,lado,lago,lega,lego,leoa,age,doa,doe,ego,ela,elo,gol,ode
+otario,atrio,oito,rito,roto,tiro,toro,trio,ira,oro,rio,tio
+buscar,cubras,busca,cruas,cubas,cubra,curas,cursa,crua,cuba,cuba,cura,ruas,suar,suba,ursa,usar,bar,cus,rua,sua,sub,usa
+danado,andado,nadado,dando,doada,anda,ando,dada,dado,dana,dano,dona,nada,nado,onda,ana,ano,doa
+avante,aventa,venta,anta,ante,etna,nata,nave,neta,neva,veta,ana,ata,ate,ave,eva
+ousado,dosou,soado,suado,usado,doas,doou,dosa,doso,duas,ousa,ouso,soda,soou,aos,das,doa,dos,dou,duo,soa,sou,sua,suo,usa,uso
+inveja,envia,nevai,vejai,viaje,viena,viena,avie,jean,nave,neva,vaie,veia,veja,ave,eia,eva,eva,vai,via
+limite,milite,emiti,imite,limei,lime,meti,miei,temi,time,lei,mel,mie,mil,tem
+grande,drena,edgar,grade,negar,negra,range,renda,ande,arde,dane,dera,erga,gane,gear,gera,nade,nega,rega,rena,age,are,dar,der,era
+alguma,alugam,aguam,algam,algum,aluga,lagam,agua,alga,alma,aula,gala,gama,gula,laga,lama,mala,mula,ala,ama,lua,mal,mau,uma
+mestre,restem,ester,meter,metes,remes,reste,serem,temer,temes,terem,teres,treme,este,mete,reme,sete,teme,tese,trem,sem,ser,tem,ter
